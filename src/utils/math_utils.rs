@@ -1,9 +1,9 @@
-//Some of the utilities here are already implemented in external crates; but doing them here for learning purposes
 use num_bigint::BigUint;
 use num_integer::Integer;
-
+use rand::prelude::*;
 
 // Custom Implementations
+//Some of the utilities here are already implemented in external crates; but doing them here for learning purposes
 
 // This custom implementation was just to help me write the one for num_bigint: has no usage otherwise - hence commented
 // #[allow(dead_code)]
@@ -58,3 +58,7 @@ pub fn gcd(a: &BigUint, b: &BigUint)-> BigUint{
     a.gcd(b)
 }
 
+pub fn get_random_biguint(bit_size : usize) -> BigUint{
+    // return BigUint::from(rand::rng());
+    BigUint::from(bit_size) // still doing
+}
